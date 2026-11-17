@@ -1,6 +1,7 @@
 
 import React from "react";
 import { writeFile } from "node:fs/promises";
+import process from "node:process";
 
 import {
   render,
@@ -12,7 +13,7 @@ import LaunchKitPage from "../src/templates/LaunchKitPage.jsx";
 async function main() {
   console.log("Rendering LaunchKit...");
 
-  const template = <LaunchKitPage />;
+  const template = React.createElement(LaunchKitPage);
 
   const result = await render(template);
 

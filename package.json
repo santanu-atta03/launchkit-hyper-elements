@@ -7,7 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "render:page": "tsx scripts/render-page.jsx",
+    "render:email": "tsx scripts/render-email.jsx",
+    "render:invoice": "tsx scripts/render-invoice.jsx",
+    "render:social": "tsx scripts/render-social.jsx",
+    "render:all": "npm run render:page && npm run render:email && npm run render:invoice && npm run render:social"
   },
   "dependencies": {
     "@hyper-elements/react": "^0.4.6",

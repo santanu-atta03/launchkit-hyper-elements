@@ -1,96 +1,122 @@
-🚀 LaunchKit
+# LaunchKit
 
-One design system. Four creative outputs.
+## One design. Four possibilities.
 
-LaunchKit is an open-source template collection built with Hyper Elements, the React component library by Unlayer.
+LaunchKit is an open-source multi-format template studio built with React and [Hyper Elements](https://hyper-elements.dev/). It demonstrates how one shared design system can produce four real creative outputs:
 
-Create beautiful web pages, responsive emails, professional PDF documents and social media graphics using a shared component system.
+- **Website** — a product landing page rendered to HTML
+- **Email** — a responsive welcome email rendered to HTML and plain text
+- **PDF** — a professional, print-ready invoice
+- **Social** — a 1200 × 630 PNG announcement graphic
 
-✨ Features
-🌐 Landing Pages — Modern, responsive website templates.
-📧 Email Templates — Beautiful transactional email designs.
-📄 PDF Documents — Professional invoices and business documents.
-🎨 Social Graphics — Ready-to-use social media visuals.
-🎯 Shared Design System — Consistent colors, typography and styling.
-⚛️ React JSX — Built using familiar React components.
-🛠️ Built With
-React
-JavaScript (JSX)
-Hyper Elements
-Vite
-Node.js
+The project is designed for the [Hyper Elements Template Challenge](https://hyper-elements.dev/) and keeps the source in JavaScript/JSX.
 
-## 🖼️ Preview
+## Preview
 
-### Website
-![LaunchKit Website](screenshots/website.png)
+The Vite app includes a responsive studio interface with searchable template cards, category filters, output previews and direct links to generated artifacts.
 
-### Welcome Email
-![Welcome Email](screenshots/email.png)
+### Website studio
 
-### Invoice PDF
-![Invoice](screenshots/invoice.png)
+![LaunchKit website](screenshots/website.png)
 
-### Social Media Graphic
-![Social Card](screenshots/social-card.png)
+### Welcome email
 
+![LaunchKit welcome email](screenshots/email.png)
 
-📦 Installation
+### Social output
 
-Clone the repository:
+![LaunchKit social card](screenshots/social-card.png)
 
-bash
+Generated outputs are written to:
+
+```text
+launchkit-preview.html
+welcome-email.html
+welcome-email.txt
+out/launchkit-invoice.pdf
+out/launchkit-social.png
+```
+
+## Features
+
+- Shared LaunchKit theme tokens across all four Hyper Elements templates
+- Responsive SaaS-style template gallery
+- Working category filters and template search
+- Accessible navigation, buttons, links and preview modal
+- Deterministic HTML, PDF and PNG render scripts
+- Cross-platform social image font lookup with environment variable overrides
+- React JSX only — no TypeScript or TSX
+
+## Tech stack
+
+React · JavaScript/JSX · Vite · Hyper Elements · Node.js · Lucide React
+
+## Getting started
+
+```bash
 git clone https://github.com/santanu-atta03/launchkit-hyper-elements.git
 cd launchkit-hyper-elements
-
-
-Install dependencies:
-
-bash
 npm install
-
-
-Start the development server:
-
-bash
 npm run dev
+```
 
-🎨 Project Structure
-text
-launchkit/
-├── src/
-│   ├── templates/
-│   │   ├── LaunchKitPage.jsx
-│   │   ├── WelcomeEmail.jsx
-│   │   ├── Invoice.jsx
-│   │   └── SocialCard.jsx
-│   ├── theme/
-│   │   └── launchkitTheme.js
-│   ├── App.jsx
-│   └── main.jsx
-├── scripts/
-│   ├── render-page.jsx
-│   ├── render-invoice.jsx
-│   └── render-social.jsx
-├── out/
-└── README.md
+Open the local URL printed by Vite.
 
-🖼️ Outputs
+## Commands
 
-LaunchKit demonstrates four different output formats from Hyper Elements:
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create the production web build |
+| `npm run lint` | Run ESLint |
+| `npm run preview` | Preview the production build |
+| `npm run render:page` | Generate `launchkit-preview.html` |
+| `npm run render:email` | Generate HTML and plain-text email files |
+| `npm run render:invoice` | Generate `out/launchkit-invoice.pdf` |
+| `npm run render:social` | Generate `out/launchkit-social.png` |
+| `npm run render:all` | Run all four renderers |
 
-Web page — HTML
-Welcome email — HTML
-Invoice — PDF
-Social media graphic — PNG
-🚀 Why LaunchKit?
+The social renderer looks for DejaVu Sans on Linux and Arial on Windows. To use custom fonts, set `LAUNCHKIT_FONT_REGULAR` and `LAUNCHKIT_FONT_BOLD` to font file paths before running `npm run render:social`.
 
-LaunchKit demonstrates how a shared React component system can power multiple content formats while maintaining a consistent visual identity.
+## Project structure
 
-Instead of designing each output independently, developers can reuse a shared theme and component architecture.
+```text
+src/
+├── App.jsx                    # Interactive studio interface
+├── App.css                    # Product UI and responsive styles
+├── index.css                  # Global CSS tokens and reset
+├── templates/
+│   ├── LaunchKitPage.jsx      # Hyper Elements Page → HTML
+│   ├── WelcomeEmail.jsx       # Hyper Elements Email → HTML/text
+│   ├── Invoice.jsx            # Hyper Elements Document → PDF
+│   └── SocialCard.jsx         # Hyper Elements Canvas → PNG
+└── theme/
+    └── launchkitTheme.js      # Shared Hyper Elements theme
+scripts/
+├── render-page.jsx
+├── render-email.jsx
+├── render-invoice.jsx
+└── render-social.jsx
+```
 
-📜 License
+## Architecture
 
-MIT
+The interactive site is ordinary React and CSS so it can provide meaningful search, filtering, previews and responsive navigation. The four generated outputs remain native Hyper Elements templates:
 
-Built with ❤️ using Hyper Elements.
+1. `Page` renders the web landing page.
+2. `Email` renders HTML and plain text email output.
+3. `Document` renders the invoice to PDF.
+4. `Canvas` renders the social graphic to PNG.
+
+All four templates import `src/theme/launchkitTheme.js`, while format-specific layout decisions remain inside each template. Hyper Elements validation runs as part of rendering and rejects unsupported structures or styles.
+
+## Contributing
+
+1. Fork the repository and create a focused branch.
+2. Keep generated templates in JSX and use the installed Hyper Elements API.
+3. Run `npm run lint`, `npm run build` and `npm run render:all`.
+4. Include a clear description and screenshots for visual changes.
+
+## License
+
+MIT © LaunchKit contributors

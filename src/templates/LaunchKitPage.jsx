@@ -11,27 +11,12 @@ import {
   Divider,
 } from "@hyper-elements/react";
 import launchkitTheme from "../theme/launchkitTheme.js";
-const features = [
-  {
-    number: "01",
-    title: "Email Templates",
-    description: "Beautiful responsive emails for your customers.",
-  },
-  {
-    number: "02",
-    title: "Web Pages",
-    description: "Modern landing pages for growing businesses.",
-  },
-  {
-    number: "03",
-    title: "PDF Documents",
-    description: "Professional invoices and business documents.",
-  },
-  {
-    number: "04",
-    title: "Social Graphics",
-    description: "Eye-catching graphics for your social channels.",
-  },
+
+const outputs = [
+  { number: "01", label: "Website", description: "Conversion-ready pages that make your launch feel inevitable.", color: "#0066CC" },
+  { number: "02", label: "Email", description: "Thoughtful lifecycle moments that sound like your brand.", color: "#0066CC" },
+  { number: "03", label: "PDF", description: "Clear, professional documents your customers trust.", color: "#0066CC" },
+  { number: "04", label: "Social", description: "Scroll-stopping visuals built to travel further.", color: "#0066CC" },
 ];
 
 export default function LaunchKitPage() {
@@ -39,204 +24,63 @@ export default function LaunchKitPage() {
     <Page
       width={1200}
       theme={launchkitTheme}
-      title="LaunchKit - Build Beautiful Templates"
-      description="A collection of beautiful business templates."
-      style={{
-        backgroundColor: "#F8FAFC",
-        color: "#172033",
-        fontFamily: "Arial, sans-serif",
-        fontSize: 16,
-        gap: 0,
-      }}
+      title="LaunchKit — One design. Four possibilities."
+      description="An open-source multi-format template studio built with React and Hyper Elements."
+      style={{ backgroundColor: "#FFFFFF", color: "#1D1D1F", fontFamily: "SF Pro Text, system-ui, sans-serif", fontSize: 17, gap: 0 }}
     >
-      {/* Navbar */}
-      <Section
-        style={{
-          backgroundColor: "#FFFFFF",
-          padding: [24, 48],
-        }}
-      >
-        <Row
-          style={{
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <Heading level={2} style={{ fontSize: 25 }}>
-            LaunchKit.
-          </Heading>
-
-          <Text style={{ color: "#64748B", fontSize: 14 }}>
-            Templates | Features | Pricing
-          </Text>
-
-          <Button
-            href="#templates"
-            style={{
-              backgroundColor: "#6546E8",
-              color: "#FFFFFF",
-              padding: [12, 20],
-              borderRadius: 8,
-              fontWeight: 700,
-            }}
-          >
-            Explore templates
-          </Button>
+      <Section style={{ backgroundColor: "#111827", padding: [22, 52] }}>
+        <Row style={{ alignItems: "center", justifyContent: "space-between" }}>
+          <Heading level={2} style={{ color: "#FFFFFF", fontSize: 21 }}>LaunchKit.</Heading>
+          <Text style={{ color: "#CCCCCC", fontSize: 12 }}>Templates&nbsp;&nbsp;&nbsp;Architecture&nbsp;&nbsp;&nbsp;Open source</Text>
+          <Button href="#templates" style={{ backgroundColor: "#1D1D1F", color: "#FFFFFF", padding: [8, 15], borderRadius: 8, fontSize: 14 }}>Explore templates</Button>
         </Row>
       </Section>
 
-      {/* Hero */}
-      <Section
-        style={{
-          backgroundColor: "#111827",
-          padding: [90, 48],
-          gap: 24,
-          alignItems: "center",
-        }}
-      >
-        <Text
-          style={{
-            color: "#A78BFA",
-            fontWeight: 700,
-            textAlign: "center",
-          }}
-        >
-          THE ALL-IN-ONE TEMPLATE STUDIO
-        </Text>
-
-        <Heading
-          level={1}
-          style={{
-            color: "#FFFFFF",
-            fontSize: 58,
-            textAlign: "center",
-            lineHeight: 1.15,
-          }}
-        >
-          One design. Four possibilities.
-        </Heading>
-
-        <Text
-          style={{
-            color: "#CBD5E1",
-            fontSize: 19,
-            textAlign: "center",
-          }}
-        >
-          Create beautiful websites, emails, PDFs and social graphics
-          using one powerful component system.
-        </Text>
-
-        <Button
-          href="#templates"
-          style={{
-            backgroundColor: "#8B5CF6",
-            color: "#FFFFFF",
-            padding: [16, 28],
-            borderRadius: 10,
-            fontWeight: 700,
-          }}
-        >
-          Explore the collection →
-        </Button>
+      <Section style={{ backgroundColor: "#272729", padding: [80, 52, 94], gap: 22, alignItems: "center" }}>
+        <Text style={{ color: "#2997FF", fontWeight: 600, fontSize: 12, letterSpacing: 1.8 }}>ONE DESIGN SYSTEM · FOUR CREATIVE OUTPUTS</Text>
+        <Column style={{ gap: 2, alignItems: "center" }}><Heading level={1} style={{ color: "#FFFFFF", fontSize: 56, lineHeight: 1.07, textAlign: "center" }}>One design.</Heading><Heading level={1} style={{ color: "#FFFFFF", fontSize: 56, lineHeight: 1.07, textAlign: "center" }}>Four possibilities.</Heading></Column>
+        <Text style={{ maxWidth: 620, color: "#CCCCCC", fontSize: 17, lineHeight: 1.47, textAlign: "center" }}>LaunchKit turns one shared React design system into beautiful websites, emails, PDFs and social graphics — ready to ship.</Text>
+        <Button href="#templates" style={{ backgroundColor: "#0066CC", color: "#FFFFFF", padding: [11, 22], borderRadius: 9999, fontSize: 17 }}>Explore the collection →</Button>
       </Section>
 
-      {/* Features */}
-      <Section
-        style={{
-          padding: [64, 48],
-          gap: 32,
-        }}
-      >
-        <Column style={{ gap: 12 }}>
-          <Heading level={2} style={{ fontSize: 36 }}>
-            Everything works together.
-          </Heading>
-
-          <Text style={{ color: "#64748B" }}>
-            Four formats. One consistent design language.
-          </Text>
+      <Section style={{ padding: [78, 52], gap: 30 }}>
+        <Column style={{ gap: 10 }}>
+          <Text style={{ color: "#0066CC", fontSize: 12, fontWeight: 600, letterSpacing: 1.6 }}>THE FORMAT ADVANTAGE</Text>
+          <Heading level={2} style={{ fontSize: 36 }}>Design once. Show up everywhere.</Heading>
+          <Text style={{ color: "#64748B" }}>A shared visual language for every way your product meets the world.</Text>
         </Column>
-
-        <Grid columns={2} style={{ gap: 20 }}>
-          {features.map((feature) => (
-            <Column
-              key={feature.number}
-              style={{
-                backgroundColor: "#FFFFFF",
-                padding: 28,
-                border: "1px solid #E2E8F0",
-                borderRadius: 14,
-                gap: 12,
-              }}
-            >
-              <Text style={{ color: "#8B5CF6", fontWeight: 700 }}>
-                {feature.number}
-              </Text>
-
-              <Heading level={3} style={{ fontSize: 23 }}>
-                {feature.title}
-              </Heading>
-
-              <Text style={{ color: "#64748B" }}>
-                {feature.description}
-              </Text>
+        <Grid columns={2} style={{ gap: 18 }}>
+          {outputs.map((output) => (
+            <Column key={output.number} style={{ backgroundColor: "#FFFFFF", padding: 24, border: "1px solid #E0E0E0", borderRadius: 18, gap: 10 }}>
+              <Row style={{ justifyContent: "space-between" }}><Text style={{ color: output.color, fontWeight: 700 }}>{output.number}</Text><Text style={{ color: "#94A3B8", fontSize: 12 }}>OUTPUT</Text></Row>
+              <Heading level={3} style={{ fontSize: 22 }}>{output.label}</Heading>
+              <Text style={{ color: "#64748B", lineHeight: 1.6 }}>{output.description}</Text>
             </Column>
           ))}
         </Grid>
       </Section>
 
-      {/* CTA */}
-      <Section
-        style={{
-          backgroundColor: "#EDE9FE",
-          padding: [60, 48],
-          gap: 18,
-          alignItems: "center",
-        }}
-      >
-        <Heading level={2} style={{ fontSize: 34, textAlign: "center" }}>
-          Ready to build something amazing?
-        </Heading>
-
-        <Text style={{ color: "#475569", textAlign: "center" }}>
-          Start with LaunchKit and bring your next idea to life.
-        </Text>
-
-        <Button
-          href="https://github.com/"
-          style={{
-            backgroundColor: "#6546E8",
-            color: "#FFFFFF",
-            padding: [15, 25],
-            borderRadius: 8,
-          }}
-        >
-          Get started
-        </Button>
+      <Section id="templates" style={{ backgroundColor: "#FFFFFF", padding: [76, 52], gap: 28 }}>
+        <Row style={{ justifyContent: "space-between", alignItems: "end" }}>
+          <Column style={{ gap: 9 }}><Text style={{ color: "#0066CC", fontSize: 12, fontWeight: 600, letterSpacing: 1.6 }}>THE COLLECTION</Text><Heading level={2} style={{ fontSize: 34 }}>Templates with momentum.</Heading></Column>
+          <Text style={{ color: "#7A7A7A", fontSize: 14 }}>Real examples. Ready to remix.</Text>
+        </Row>
+        <Grid columns={4} style={{ gap: 14 }}>
+          {outputs.map((output) => <Column key={output.number} style={{ backgroundColor: "#F5F5F7", padding: 24, border: "1px solid #E0E0E0", borderRadius: 18, gap: 15 }}><Text style={{ color: output.color, fontSize: 21, fontWeight: 600 }}>{output.number}</Text><Heading level={3}>{output.label}</Heading><Text style={{ color: "#7A7A7A", fontSize: 14 }}>Built with Hyper Elements primitives.</Text></Column>)}
+        </Grid>
       </Section>
 
-      {/* Footer */}
-      <Section
-        style={{
-          backgroundColor: "#111827",
-          padding: [28, 48],
-          gap: 12,
-        }}
-      >
-        <Text style={{ color: "#FFFFFF", fontWeight: 700 }}>
-          LaunchKit.
-        </Text>
+      <Section style={{ backgroundColor: "#2A2A2C", padding: [66, 52], gap: 18, alignItems: "center" }}>
+        <Text style={{ color: "#2997FF", fontWeight: 600, fontSize: 12, letterSpacing: 1.6 }}>OPEN SOURCE BY DEFAULT</Text>
+        <Heading level={2} style={{ color: "#FFFFFF", fontSize: 34, textAlign: "center" }}>Make it yours. Ship it everywhere.</Heading>
+        <Text style={{ color: "#CCCCCC", textAlign: "center" }}>Fork the system, add your voice and keep every output on-brand.</Text>
+        <Button href="https://github.com/santanu-atta03/launchkit-hyper-elements" style={{ backgroundColor: "#0066CC", color: "#FFFFFF", padding: [11, 22], borderRadius: 9999, fontSize: 17 }}>View the source →</Button>
+      </Section>
 
-        <Divider
-          style={{
-            borderTop: "1px solid #374151",
-          }}
-        />
-
-        <Text style={{ color: "#9CA3AF", fontSize: 13 }}>
-          Built with Hyper Elements. © 2026 LaunchKit.
-        </Text>
+      <Section style={{ backgroundColor: "#111827", padding: [28, 52], gap: 12 }}>
+        <Row style={{ justifyContent: "space-between" }}><Text style={{ color: "#FFFFFF", fontWeight: 600 }}>LaunchKit.</Text><Text style={{ color: "#CCCCCC", fontSize: 12 }}>React · Hyper Elements · Vite</Text></Row>
+        <Divider style={{ borderTop: "1px solid #444444" }} />
+        <Text style={{ color: "#CCCCCC", fontSize: 11 }}>Built for the Hyper Elements Template Challenge · MIT License</Text>
       </Section>
     </Page>
   );

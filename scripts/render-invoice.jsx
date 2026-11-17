@@ -1,6 +1,7 @@
 
 import React from "react";
 import { writeFile, mkdir } from "node:fs/promises";
+import process from "node:process";
 import { renderPdf } from "@hyper-elements/react/pdf";
 import Invoice from "../src/templates/Invoice.jsx";
 
@@ -9,7 +10,7 @@ async function main() {
 
   await mkdir("out", { recursive: true });
 
-  const result = await renderPdf(<Invoice />);
+  const result = await renderPdf(React.createElement(Invoice));
 
   await writeFile("out/launchkit-invoice.pdf", result.pdf);
 

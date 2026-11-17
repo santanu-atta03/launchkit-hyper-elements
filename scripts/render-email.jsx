@@ -1,6 +1,7 @@
 
 import React from "react";
 import { writeFile } from "node:fs/promises";
+import process from "node:process";
 
 import {
   render,
@@ -12,7 +13,7 @@ import WelcomeEmail from "../src/templates/WelcomeEmail.jsx";
 async function main() {
   console.log("Rendering Welcome Email...");
 
-  const result = await render(<WelcomeEmail />);
+  const result = await render(React.createElement(WelcomeEmail));
 
   await writeFile(
     "welcome-email.html",

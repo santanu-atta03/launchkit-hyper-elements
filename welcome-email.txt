@@ -1,30 +1,30 @@
 LAUNCHKIT.
 
+WELCOME ABOARD
+
 YOUR CREATIVE WORKSPACE
 
-WELCOME ABOARD!
+MAKE EVERY FORMAT
+FEEL ON-BRAND.
 
-WELCOME TO LAUNCHKIT!
+Welcome to LaunchKit — an open-source template studio that helps you create beautiful product touchpoints from one shared React design system.
 
-We're excited to have you here. LaunchKit helps you create beautiful websites, emails, documents and graphics using one consistent design system.
+Explore LaunchKit → (https://github.com/santanu-atta03/launchkit-hyper-elements)
 
 ---
 
-HERE'S WHAT YOU CAN CREATE:
+YOUR NEW TOOLKIT INCLUDES:
 
-- Beautiful responsive websites
-- Professional email campaigns
-- Business documents and invoices
-- Social media graphics
+- Conversion-ready websites
+- Responsive welcome emails
+- Print-ready PDF documents
+- High-impact social graphics
 
-Explore LaunchKit (https://github.com/)
-
-We're looking forward to seeing what you create.
+Everything shares the same palette, spacing and visual rhythm — so your brand stays unmistakably yours.
 
 The LaunchKit Team
 
 LaunchKit.
 
 You received this email because you joined LaunchKit.
-
-© 2026 LaunchKit. All rights reserved.
+© 2026 LaunchKit · Built with Hyper Elements
