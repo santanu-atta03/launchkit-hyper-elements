@@ -19,13 +19,29 @@ JavaScript (JSX)
 Hyper Elements
 Vite
 Node.js
+
+## 🖼️ Preview
+
+### Website
+![LaunchKit Website](screenshots/website.png)
+
+### Welcome Email
+![Welcome Email](screenshots/email.png)
+
+### Invoice PDF
+![Invoice](screenshots/invoice.png)
+
+### Social Media Graphic
+![Social Card](screenshots/social-card.png)
+
+
 📦 Installation
 
 Clone the repository:
 
 bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd launchkit
+git clone https://github.com/santanu-atta03/launchkit-hyper-elements.git
+cd launchkit-hyper-elements
 
 
 Install dependencies:
